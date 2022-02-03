@@ -8,7 +8,7 @@ _Verificar que el StartupProject de VisualStudio se encuentre configurado para i
 
 ## Construido con 🛠️
 
-* [NetCore](https://dotnet.microsoft.com/en-us/download/dotnet/3.1) - Framework de .NET usado
+* [NetCore 3.1](https://dotnet.microsoft.com/en-us/download/dotnet/3.1) - Framework de .NET usado
 * [Dapper](https://dapper-tutorial.net/dapper) - ORM para conectarse con BD
 
 
