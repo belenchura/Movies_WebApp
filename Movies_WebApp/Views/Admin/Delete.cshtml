@@ -1,0 +1,95 @@
+﻿@model Movies_WebApp.Models.User
+
+@{
+    var title = "ELIMINAR REGISTRO";
+    ViewData["Title"] = title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h3>@title</h3>*@
+<div class="row justify-content-center">
+    <h4>@title</h4>
+</div>
+<hr />
+<h5>¿Estás seguro que quieres eliminar el siguiente registo?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cod_usuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.cod_usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txt_user)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.txt_user)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txt_password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.txt_password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txt_nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.txt_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txt_apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.txt_apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.txt_nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.txt_nombre)
+        </dd>
+
+
+        <dd>
+            @Html.DisplayFor(model => model.nro_doc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nro_doc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sn_activo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sn_activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cod_rol)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.cod_rol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.txt_desc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.txt_desc)
+        </dt>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="cod_usuario" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="IndexAsync" class="btn btn-info">Volver a la lista</a>
+    </form>
+</div>

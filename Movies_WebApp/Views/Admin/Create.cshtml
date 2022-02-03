@@ -1,0 +1,69 @@
+﻿@model Movies_WebApp.Models.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var title = "CREAR USUARIO";
+    ViewData["Title"] = title;
+}
+
+<style>
+    .input-validation-error {
+        border-color: red;
+    }
+</style>
+<div class="row justify-content-center">
+    <h4>@title</h4>
+</div>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="txt_user" class="control-label"></label>
+                <input asp-for="txt_user" class="form-control" />
+                <span asp-validation-for="txt_user" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="txt_password" class="control-label"></label>
+                <input asp-for="txt_password" class="form-control" />
+                <span asp-validation-for="txt_password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="txt_nombre" class="control-label"></label>
+                <input asp-for="txt_nombre" class="form-control" />
+                <span asp-validation-for="txt_nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="txt_apellido" class="control-label"></label>
+                <input asp-for="txt_apellido" class="form-control" />
+                <span asp-validation-for="txt_apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nro_doc" class="control-label"></label>
+                <input asp-for="nro_doc" class="form-control" />
+                <span asp-validation-for="nro_doc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sn_activo" class="control-label"></label>
+                <input asp-for="sn_activo" class="form-control" />
+                <span asp-validation-for="sn_activo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cod_rol" class="control-label"></label>
+                <input asp-for="cod_rol" class="form-control" />
+                <span asp-validation-for="cod_rol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="CreateAsync" class="btn btn-success" /> |
+                <a asp-action="IndexAsync" class="btn btn-info">Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>

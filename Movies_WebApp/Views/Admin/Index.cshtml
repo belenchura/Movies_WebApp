@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Movies_WebApp.Models.User>
+
+@{
+    var title = "ABM USUARIOS - MOVIE APP";
+    ViewData["Title"] = title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <h4>@title</h4>
+</div>
+<p>
+    <a asp-action="Create">Crear Nuevo Usuario</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Cod_Usuario</th>
+            <th>Usuario</th>
+            <th>Password</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Nro_Doc</th>
+            <th>Sn_Activo</th>
+            <th>Cod_Rol</th>
+            <th>Desc_Rol</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cod_usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.txt_user)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.txt_password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.txt_nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.txt_apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nro_doc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sn_activo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cod_rol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.txt_desc)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.cod_usuario }) |
+                @Html.ActionLink("Details", "Details", new { id = item.cod_usuario }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.cod_usuario })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
